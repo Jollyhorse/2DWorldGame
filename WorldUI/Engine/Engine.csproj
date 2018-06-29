@@ -2,6 +2,46 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <ApplicationIcon />
+    <Win32Resource />
+    <OutputType>Library</OutputType>
+    <StartupObject />
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Locations\FarmFields.png" />
+    <None Remove="Images\Locations\Farmhouse.png" />
+    <None Remove="Images\Locations\HerbalistsGarden.png" />
+    <None Remove="Images\Locations\HerbalistsHut.png" />
+    <None Remove="Images\Locations\Home.png" />
+    <None Remove="Images\Locations\SpiderForest.png" />
+    <None Remove="Images\Locations\TownGate.png" />
+    <None Remove="Images\Locations\TownSquare.png" />
+    <None Remove="Images\Locations\Trader.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ApplicationDefinition Include="Images\Locations\Home.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </ApplicationDefinition>
+    <ApplicationDefinition Include="Images\Locations\SpiderForest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </ApplicationDefinition>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
 
 </Project>
