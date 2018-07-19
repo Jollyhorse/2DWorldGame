@@ -1,8 +1,6 @@
-﻿using Engine.Models;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using Engine.Models;
 
 namespace Engine.Factories
 {
@@ -31,7 +29,6 @@ namespace Engine.Factories
         internal static Quest GetQuestByID(int id)
         {
             return _quests.FirstOrDefault(quest => quest.ID == id);
-
         }
     }
 }
